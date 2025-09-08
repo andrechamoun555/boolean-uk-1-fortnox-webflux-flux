@@ -1,0 +1,23 @@
+server:
+  port: 4000
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:4432/{db-name}
+    username: admin
+    password: admin
+    max-active: 5
+    max-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
